@@ -1,0 +1,55 @@
+{
+	"name":"tedx",
+	"version":"0.0.1",
+	"fullName":"TEDx events",
+	"description":"Theme for TEDx events",
+	"keywords": [
+       "tedx",
+       "events",
+       "video",
+       "ted"
+   ],
+	"joshfire":{
+		"devices":{
+			"phone":{
+				"startfile":"app/index.html"
+			},
+			"tv":{
+				"startfile":"tvapp/index.html"
+			}
+		},
+		"datasources":{
+			"main":{
+				"title":"Videos",
+				"description":"Videos for each event"
+			},
+			"news":{
+				"title":"News feed"
+			}
+		},
+		"options":{
+			"schema":{
+				"tedxlocation":{
+					"type":"string",
+					"title":"Name of the event",
+					"required":true
+				},
+				"abouthtml":{
+					"type":"string"
+				}
+			},
+			"form":[
+				{
+					"key":"tedxlocation",
+					"prepend":"TEDx"
+				},
+				"datasources.main",
+				"datasources.news",
+				{
+					"key":"abouthtml",
+					"type":"textarea"
+				}
+			]
+		}
+	}
+}
