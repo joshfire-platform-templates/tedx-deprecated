@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>myTED.tv</title>
+    
+       <script src="phonegap-0.9.6.js"></script>
+    
+    	<script data-joshfire-bootstrap>
+console.warn('hello bootstrap')
+			(function() {
+
+			var Joshfire = window.Joshfire || {};
+			
+			if (!Joshfire.config) Joshfire.config = {};
+
+			Joshfire.config.datasources = {
+				"main":{
+					'collection':'youtube.video',
+					'name':'TEDxParis 2011',
+					'config':{'list':'EB4E907286FE3EC2'} //from platform admin
+				}
+			};
+
+			Joshfire.config.plugins = {};
+
+			Joshfire.config.theme = {
+				'config':{'color1':'white', 'color2':'red'}, //from platform admin
+				'id':'tedx', //from package.json
+				'version':'0.1.1'
+			}
+			Joshfire.config.app = {
+				id:'tedxparis',
+				splash:'./images/logo-ted/logoted-iPad.png'
+			}
+
+			//Data client interface
+			
+			Joshfire.getDataSource = function(datasourceId) {
+				var ds = Joshfire.config.datasources[datasourceId];
+			    return DatajsProxy.getCollection(ds.dbname,ds.colname,ds.query);
+			    
+				// return {
+				// 				find:function(query,callback) {
+				// 					callback(null,"data");
+				// 					
+				// 				}
+				// 			}
+			};
+
+			window.Joshfire = Joshfire;
+			})();
+
+		</script>
+      <script src="js/ipad-ios.1318955272.js"></script>
+    
+    <link rel="stylesheet" href="css/ted.ipad.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    
+      <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-iphone.png">
+    
+    
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <div id="splashscreen"><!--<span class="logo"></span><span class="powered"></span>--></div>
+    <script>
+      
+      Joshfire.require(['src/app.ios'], function(MyTedTV) {
+        Joshfire.onReady(function() {
+          if (!TEDXID) TEDXID = 'paris';
+          BUILDNAME = 'ipad';
+          window._app = new MyTedTV();
+        });
+      });
+    </script>
+    <script src="scripts/helper.js"></script>
+    <script>
+      MBP.scaleFix();
+    </script>
+  </body>
+</html>

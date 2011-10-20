@@ -1,0 +1,12 @@
+@import url('./ted.iphone.css');
+
+body,
+#myTED__main__home,
+#myTED__toolbar,
+.myTED__main__themes__themeslist_scroller ul,
+.myTED__main__tedx__tedxlist_scroller ul,
+.myTED__main__home__videolistpanel__videolist_scroller ul,
+.myTED__main__favorites__favlist_scroller ul,
+#myTED__footer {
+  width: 320px;
+}

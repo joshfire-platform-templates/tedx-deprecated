@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>myTED.tv</title>
+    <script src="phonegap-0.9.6.js"></script>
+    <script src="config.js"></script>
+
+    <script data-main="./" src="joshfire/adapters/ios/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/ted.ipad.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-iphone.png">
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <div id="splashscreen"><!--<span class="logo"></span><span class="powered"></span>--></div>
+    <script>
+      Joshfire.require(['src/app.ios'], function(MyTedTV) {
+        Joshfire.onReady(function() {
+          if (!TEDXID) TEDXID = 'tedxparis';
+          BUILDNAME = 'ipad';
+          window._app = new MyTedTV();
+        });
+      });
+    </script>
+    <script src="scripts/helper.js"></script>
+    <script>
+      MBP.scaleFix();
+    </script>
+  </body>
+</html>
