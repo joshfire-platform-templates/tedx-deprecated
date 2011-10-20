@@ -67,6 +67,15 @@ console.warn('hello bootstrap')
   <body>
     <div id="fb-root"></div>
     <div id="splashscreen"><!--<span class="logo"></span><span class="powered"></span>--></div>
-    
+    <script>
+      
+      Joshfire.require(['src/app.ios'], function(MyTedTV) {
+        Joshfire.onReady(function() {
+          if (!TEDXID) TEDXID = 'paris';
+          BUILDNAME = 'ipad';
+          window._app = new MyTedTV();
+        });
+      });
+    </script>
   </body>
 </html>
