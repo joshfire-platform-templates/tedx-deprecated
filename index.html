@@ -31,7 +31,7 @@ console.warn('hello bootstrap')
 			}
 			Joshfire.config.app = {
 				id:'tedxparis',
-				splash:'./images/logo-ted/logoted-iPad.png'
+				splash:'./mobileapp/images/logo-ted/logoted-iPad.png'
 			}
 
 			//Data client interface
@@ -54,7 +54,7 @@ console.warn('hello bootstrap')
 		</script>
 
     
-    <link rel="stylesheet" href="css/ted.ipad.css" />
+    <link rel="stylesheet" href="mobileapp/css/ted.ipad.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -67,19 +67,6 @@ console.warn('hello bootstrap')
   <body>
     <div id="fb-root"></div>
     <div id="splashscreen"><!--<span class="logo"></span><span class="powered"></span>--></div>
-    <script>
-      
-      Joshfire.require(['src/app.ios'], function(MyTedTV) {
-        Joshfire.onReady(function() {
-          if (!TEDXID) TEDXID = 'paris';
-          BUILDNAME = 'ipad';
-          window._app = new MyTedTV();
-        });
-      });
-    </script>
-    <script src="scripts/helper.js"></script>
-    <script>
-      MBP.scaleFix();
-    </script>
+    
   </body>
 </html>
