@@ -6,54 +6,8 @@
     
        <script src="mobileapp/phonegap-0.9.6.js"></script>
           <script src="mobileapp/js/ipad-ios.1318955272.js"></script>
-    	<script data-joshfire-bootstrap>
-console.warn('hello bootstrap')
-			(function() {
+    	<script data-joshfire-bootstrap src="http://127.0.0.1:40021/bootstrap/4e9efd9d8af82aa203000022/4ea04bc23ad96b238f000004/"></script>
 
-			var Joshfire = window.Joshfire || {};
-			
-			if (!Joshfire.config) Joshfire.config = {};
-
-			Joshfire.config.datasources = {
-				"main":{
-					'collection':'youtube.video',
-					'name':'TEDxParis 2011',
-					'config':{'list':'EB4E907286FE3EC2'} //from platform admin
-				}
-			};
-
-			Joshfire.config.plugins = {};
-
-			Joshfire.config.theme = {
-				'config':{'color1':'white', 'color2':'red'}, //from platform admin
-				'id':'tedx', //from package.json
-				'version':'0.1.1'
-			}
-			Joshfire.config.app = {
-				id:'tedxparis',
-				splash:'./mobileapp/images/logo-ted/logoted-iPad.png'
-			}
-
-			//Data client interface
-			
-			Joshfire.getDataSource = function(datasourceId) {
-				var ds = Joshfire.config.datasources[datasourceId];
-			    return DatajsProxy.getCollection(ds.dbname,ds.colname,ds.query);
-			    
-				// return {
-				// 				find:function(query,callback) {
-				// 					callback(null,"data");
-				// 					
-				// 				}
-				// 			}
-			};
-
-			window.Joshfire = Joshfire;
-			})();
-
-		</script>
-
-    
     <link rel="stylesheet" href="mobileapp/css/ted.ipad.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -72,7 +26,7 @@ console.warn('hello bootstrap')
       Joshfire.require(['src/app.ios'], function(MyTedTV) {
         Joshfire.onReady(function() {
 	console.warn('READY')
-          if (typeof TEDXID!=="undefined") TEDXID = 'paris';
+          if (typeof TEDXID=="undefined") TEDXID = 'paris';
           BUILDNAME = 'ipad';
           window._app = new MyTedTV();
         });
