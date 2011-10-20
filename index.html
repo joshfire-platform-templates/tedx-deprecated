@@ -71,7 +71,8 @@ console.warn('hello bootstrap')
       
       Joshfire.require(['src/app.ios'], function(MyTedTV) {
         Joshfire.onReady(function() {
-          if (!TEDXID) TEDXID = 'paris';
+	console.warn('READY')
+          if (typeof TEDXID!=="undefined") TEDXID = 'paris';
           BUILDNAME = 'ipad';
           window._app = new MyTedTV();
         });
