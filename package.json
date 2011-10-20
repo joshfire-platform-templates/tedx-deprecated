@@ -12,10 +12,10 @@
 	"joshfire":{
 		"devices":{
 			"phone":{
-				"startfile":"mobileapp/index.ipad.html"
+				"startfile":"mobileapp/index.html"
 			},
 			"tablet":{
-				"startfile":"mobileapp/index.ipad.html"
+				"startfile":"mobileapp/index.html"
 			},
 			"tv":{
 				"startfile":"tvapp/index.html"
