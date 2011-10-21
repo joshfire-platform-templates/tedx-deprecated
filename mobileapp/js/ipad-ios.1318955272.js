@@ -5422,7 +5422,6 @@ function(DataSource,_) {
     
       talk.title = label;
       talk.id=talk.sourceId;
-
       /* Dirty fixes for apple commercial */
       //Fix Vinvin
       talk.abstract = talk.abstract.replace(/Vinvin \(alias Cyrille Delasteyrie\)/, 'Cyrille de Lasteyrie, alias Vinvin, ');
@@ -10250,10 +10249,14 @@ function(Video,Class, $, _) {
 
       //TODO configurable aspect ratio.
       var height = parseInt(width * 9 / 16);
-
+      
+      if (!/youtube\./.test(options.url)){
+        options.url = 'http://www.youtube.com/v/'+options.url;
+      }
+      
       // Insertion
       this.htmlEl.innerHTML = '<object width=\"' + width + '\" height=\"' + height + '\">' + //
-          '<param name=\"movie\" value=\"http://www.youtube.com/v/' + options.url + '&f=gdata_videos\"></param>' +
+          '<param name=\"movie\" value=\"' + options.url + '&f=gdata_videos\"></param>' +
           '<param name=\"wmode\" value=\"transparent\"></param>' +
           '<embed src=\"http://www.youtube.com/v/' + options.url + '&f=gdata_videos\"' +
           'type=\"application/x-shockwave-flash\" wmode=\"transparent\" width=\"' + width + '\" height=\"' + height + '\"></embed>' + //
