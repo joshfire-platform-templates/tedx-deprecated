@@ -5397,7 +5397,7 @@ function(DataSource,_) {
     // Beautify the labels from YouTube
     formatTalkDataFromYoutube:function(talk) {
     
-      var label = talk.label;
+      var label = talk.title;
     
       //strip "TEDx XYZ 20xx"
       label = label.replace(/tedx( )?([a-z0-9]+)( 20[0-9]{2})?/ig,"");
@@ -5420,12 +5420,12 @@ function(DataSource,_) {
       label = label.replace(/[ \-\:]+$/,"");
     
     
-      talk.label = label;
+      talk.title = label;
 
 
       /* Dirty fixes for apple commercial */
       //Fix Vinvin
-      talk.summary = talk.summary.replace(/Vinvin \(alias Cyrille Delasteyrie\)/, 'Cyrille de Lasteyrie, alias Vinvin, ');
+      talk.abstract = talk.abstract.replace(/Vinvin \(alias Cyrille Delasteyrie\)/, 'Cyrille de Lasteyrie, alias Vinvin, ');
       
       //Fix order by
       var weights = {
@@ -5664,12 +5664,13 @@ function(Class, DataTree, _, TEDAPI,TEDxAPI, YoutubeAPI, TwitterAPI, DataSource)
                 ds.find(
                     {playlist:talk.meta.youtube},
                     function (err, data){
-                      console.warn('found', data.entries)
-                      //return data;
-                      cb(err,_.sortBy(
+                      var videos = _.sortBy(
                         _.map(data.entries,TEDxAPI.formatTalkDataFromYoutube),
                         function (t){ return t.weight||99}
-                      ));
+                      );
+                      console.warn('found', videos)
+                      //return data;
+                      cb(err,videos);
                       
                     });
                     
