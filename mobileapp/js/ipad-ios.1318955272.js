@@ -5664,10 +5664,10 @@ function(Class, DataTree, _, TEDAPI,TEDxAPI, YoutubeAPI, TwitterAPI, DataSource)
                 ds.find(
                     {playlist:talk.meta.youtube},
                     function (err, data){
-                      console.warn('found', data)
+                      console.warn('found', data.entries)
                       //return data;
                       cb(err,_.sortBy(
-                        _.map(data,TEDxAPI.formatTalkDataFromYoutube),
+                        _.map(data.entries,TEDxAPI.formatTalkDataFromYoutube),
                         function (t){ return t.weight||99}
                       ));
                       
