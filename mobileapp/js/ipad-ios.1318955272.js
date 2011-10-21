@@ -5421,7 +5421,7 @@ function(DataSource,_) {
     
     
       talk.title = label;
-      talk.id=talk.identifier;
+      talk.id=talk.sourceId;
 
       /* Dirty fixes for apple commercial */
       //Fix Vinvin
