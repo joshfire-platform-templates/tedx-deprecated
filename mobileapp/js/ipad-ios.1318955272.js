@@ -5657,15 +5657,19 @@ function(Class, DataTree, _, TEDAPI,TEDxAPI, YoutubeAPI, TwitterAPI, DataSource)
                 //                                                   
                 //                                                 });
                 var ds = Joshfire.getDataSource('youtube90');
-                console.warn('data source ?', ds)
+                console.warn('data source ?', q, talk)
                 if (!ds || !ds.find){
                   return ['bullshit'];
                 }
                 ds.find(
-                    {playlist:'EB4E907286FE3EC2'},
+                    {playlist:talk.meta.youtube},
                     function (err, data){
                       console.warn('found', data)
-                      return data;
+                      //return data;
+                      cb(err,_.sortBy(
+                        _.map(data,TEDxAPI.formatTalkDataFromYoutube),
+                        function (t){ return t.weight||99}
+                      ));
                       
                     });
                     
