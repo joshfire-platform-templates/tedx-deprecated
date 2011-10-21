@@ -5664,6 +5664,7 @@ function(Class, DataTree, _, TEDAPI,TEDxAPI, YoutubeAPI, TwitterAPI, DataSource)
                 ds.find(
                     {playlist:'EB4E907286FE3EC2', list:'0548DCF75693BB71'},
                     function (err, data){
+                      console.Warn('found', data)
                       return data;
                       
                     });
