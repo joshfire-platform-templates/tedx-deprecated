@@ -16,7 +16,7 @@
 				"startfile":"mobileapp/index.html"
 			},
 			{
-			  "devices":"*",
+			  "devices":"tv",
 				"startfile":"tvapp/index.html"
 			}
 		],
