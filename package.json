@@ -13,7 +13,7 @@
 		"devices":[
 			{
 			  "devices":["phone","tablet"],
-				"startfile":"mobileapp/index.html"
+				"startfile":"mobileapp/index.ipad.html"
 			},
 			{
 			  "devices":"tv",
