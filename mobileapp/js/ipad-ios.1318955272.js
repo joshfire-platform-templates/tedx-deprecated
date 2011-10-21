@@ -10258,7 +10258,7 @@ function(Video,Class, $, _) {
       this.htmlEl.innerHTML = '<object width=\"' + width + '\" height=\"' + height + '\">' + //
           '<param name=\"movie\" value=\"' + options.url + '&f=gdata_videos\"></param>' +
           '<param name=\"wmode\" value=\"transparent\"></param>' +
-          '<embed src=\"http://www.youtube.com/v/' + options.url + '&f=gdata_videos\"' +
+          '<embed src=\"' + options.url + '&f=gdata_videos\"' +
           'type=\"application/x-shockwave-flash\" wmode=\"transparent\" width=\"' + width + '\" height=\"' + height + '\"></embed>' + //
           '</object>';
 
