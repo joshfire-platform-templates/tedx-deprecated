@@ -5664,7 +5664,7 @@ function(Class, DataTree, _, TEDAPI,TEDxAPI, YoutubeAPI, TwitterAPI, DataSource)
           };
 
           // Static TEDx list provided in config.js
-          if (TEDXLIST) {
+          if (typeof TEDXLIST!=='undefined') {
             gotList(null,TEDXLIST);
           } else {
             TEDxAPI.getTEDxList(TEDXID?{"filter":{"id":TEDXID}}:{},gotList);

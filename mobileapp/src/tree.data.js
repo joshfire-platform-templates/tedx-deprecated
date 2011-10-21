@@ -113,7 +113,7 @@ Joshfire.define(['joshfire/class', 'joshfire/tree.data', 'joshfire/vendor/unders
           };
 
           // Static TEDx list provided in config.js
-          if (TEDXLIST) {
+          if (typeof TEDXLIST!=='undefined') {
             gotList(null,TEDXLIST);
           } else {
             TEDxAPI.getTEDxList(TEDXID?{"filter":{"id":TEDXID}}:{},gotList);
