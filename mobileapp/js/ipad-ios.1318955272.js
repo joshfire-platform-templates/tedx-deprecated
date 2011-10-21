@@ -7793,6 +7793,8 @@ function(Class, UITree, List, Panel, PanelManager, Button, TEDApi,JoshmeAPI,  _,
                   var player = app.ui.element('/main/home/videodetail/player');
                   var playerYT = app.ui.element('/main/home/videodetail/player.youtube');
                   
+                  console.warn('video data', ui.data)
+                  
                   if (ui.data) {
                     if (ui.data.source=="youtube") {
                       playerYT.show();
