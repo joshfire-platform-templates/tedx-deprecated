@@ -5662,9 +5662,9 @@ function(Class, DataTree, _, TEDAPI,TEDxAPI, YoutubeAPI, TwitterAPI, DataSource)
                   return ['bullshit'];
                 }
                 ds.find(
-                    {playlist:'EB4E907286FE3EC2', list:'0548DCF75693BB71'},
+                    {playlist:'EB4E907286FE3EC2'},
                     function (err, data){
-                      console.Warn('found', data)
+                      console.warn('found', data)
                       return data;
                       
                     });
