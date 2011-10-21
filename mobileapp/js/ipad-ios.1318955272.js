@@ -5668,7 +5668,7 @@ function(Class, DataTree, _, TEDAPI,TEDxAPI, YoutubeAPI, TwitterAPI, DataSource)
                         _.map(data.entries,TEDxAPI.formatTalkDataFromYoutube),
                         function (t){ return t.weight||99}
                       );
-                      console.warn('found', videos)
+                      console.warn('#found', videos)
                       //return data;
                       cb(err,videos);
                       
