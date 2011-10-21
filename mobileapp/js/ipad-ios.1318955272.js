@@ -7757,7 +7757,7 @@ function(Class, UITree, List, Panel, PanelManager, Button, TEDApi,JoshmeAPI,  _,
                     },
                     autoShow: true,
                     // modify default content of the <li>. item correspond to the childrens of videos/ in the data tree
-                    itemInnerTemplate: '<figure><img src="<%= item.image %>"/><figcaption><%= item.label %><br><span class="talker"><%= item.talker?"par "+item.talker.name:"" %></span></figcaption></figure>',
+                    itemInnerTemplate: '<figure><img src="<%= item.image %>"/><figcaption><%= item.title %><br><span class="talker"><%= item.talker?"par "+item.talker.name:"" %></span></figcaption></figure>',
                     scroller: true,
                     scrollOptions: {
                       // do scroll in only one direction
@@ -7834,7 +7834,7 @@ function(Class, UITree, List, Panel, PanelManager, Button, TEDApi,JoshmeAPI,  _,
                           app.data.set('/talks/favorites/', 
                           _.select(app.data.get('/talks/all/'), 
                              function (item){
-                               return _.contains(app.userSession.mytv.favorites, item.id);
+                               return _.contains(app.userSession.mytv.favorites, item.identifier );
                              }
                            )
                           );
@@ -7927,7 +7927,7 @@ function(Class, UITree, List, Panel, PanelManager, Button, TEDApi,JoshmeAPI,  _,
                         uiDataSync:'/main/home/videodetail',
                         innerTemplate:
                           '<h1 class="label"></h1>'+
-                          '<p class="description"><%= data.summary %></p>'
+                          '<p class="description"><%= data.abstract %></p>'
                       },
                       {
                         id: 'talkerinfo',
@@ -7959,7 +7959,7 @@ function(Class, UITree, List, Panel, PanelManager, Button, TEDApi,JoshmeAPI,  _,
                 incrementalRefresh: true,
                 autoShow: true,
                 // modify default content of the <li>. item correspond to the childrens of videos/ in the data tree
-                itemInnerTemplate: '<figure data-id="<%= item.id %>"><img src="<%= item.image ? item.image : "http://placehold.it/208x142" %>"/><figcaption><%= item.label %></figcaption></figure>',
+                itemInnerTemplate: '<figure data-id="<%= item.identifier %>"><img src="<%= item.image ? item.image : "http://placehold.it/208x142" %>"/><figcaption><%= item.title %></figcaption></figure>',
                 scroller: true,
                 scrollOptions: {
                   // do scroll in only one direction
@@ -7993,7 +7993,7 @@ function(Class, UITree, List, Panel, PanelManager, Button, TEDApi,JoshmeAPI,  _,
                 incrementalRefresh: true,
                 autoShow: true,
                 // modify default content of the <li>. item correspond to the childrens of videos/ in the data tree
-                itemInnerTemplate: '<figure data-id="<%= item.id %>"><img src="<%= item.image ? item.image : "http://placehold.it/208x142" %>"/><figcaption><%= item.label %></figcaption></figure>',
+                itemInnerTemplate: '<figure data-id="<%= item.identifier %>"><img src="<%= item.image ? item.image : "http://placehold.it/208x142" %>"/><figcaption><%= item.title %></figcaption></figure>',
                 scroller: true,
                 scrollOptions: {
                   // do scroll in only one direction
@@ -8683,7 +8683,7 @@ function(App, Class, _, JoshmeAPI,addToHome) {
               self.data.update('/talks/favorites/', 
               _.select(self.data.get('/talks/all/'), 
                 function (item){
-                  return _.contains(self.userSession.mytv.favorites, item.id);
+                  return _.contains(self.userSession.mytv.favorites, item.identifier);
                 }
               )
               );
