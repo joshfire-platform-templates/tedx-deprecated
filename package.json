@@ -16,10 +16,10 @@
 				"startfile":"mobileapp/index.html"
 			},
 			{
-			  "devices":"*"
+			  "devices":"*",
 				"startfile":"tvapp/index.html"
 			}
-		},
+		],
 		"datasources":{
 			"main":{
 				"title":"Videos",
