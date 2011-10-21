@@ -10250,15 +10250,15 @@ function(Video,Class, $, _) {
       //TODO configurable aspect ratio.
       var height = parseInt(width * 9 / 16);
       
-      if (!/youtube\./.test(options.url)){
-        options.url = 'http://www.youtube.com/v/'+options.url;
+      if (/youtube\./.test(options.url)){
+        options.url = options.sourceId || options.id;
       }
       
       // Insertion
       this.htmlEl.innerHTML = '<object width=\"' + width + '\" height=\"' + height + '\">' + //
-          '<param name=\"movie\" value=\"' + options.url + '&f=gdata_videos\"></param>' +
+          '<param name=\"movie\" value=\"http://www.youtube.com/v/' + options.url + '&f=gdata_videos\"></param>' +
           '<param name=\"wmode\" value=\"transparent\"></param>' +
-          '<embed src=\"' + options.url + '&f=gdata_videos\"' +
+          '<embed src=\"http://www.youtube.com/v/' + options.url + '&f=gdata_videos\"' +
           'type=\"application/x-shockwave-flash\" wmode=\"transparent\" width=\"' + width + '\" height=\"' + height + '\"></embed>' + //
           '</object>';
 
