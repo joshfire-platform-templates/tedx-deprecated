@@ -10,14 +10,13 @@
        "ted"
    ],
 	"joshfire":{
-		"devices":{
-			"phone":{
+		"devices":[
+			{
+			  "devices":["phone","tablet"],
 				"startfile":"mobileapp/index.html"
 			},
-			"tablet":{
-				"startfile":"mobileapp/index.html"
-			},
-			"tv":{
+			{
+			  "devices":"*"
 				"startfile":"tvapp/index.html"
 			}
 		},
