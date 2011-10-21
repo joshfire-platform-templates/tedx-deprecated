@@ -5421,7 +5421,7 @@ function(DataSource,_) {
     
     
       talk.title = label;
-
+      talk.id=talk.identifier;
 
       /* Dirty fixes for apple commercial */
       //Fix Vinvin
@@ -5436,7 +5436,8 @@ function(DataSource,_) {
           'Etienne Parizot':5,
           'Djazia Satour':6
         };
-        talk.weight = weights[talk.talker ? talk.talker.name : talk.label]
+        talk.weight = weights[talk.talker ? talk.talker.name : talk.label];
+        console.log('talk',talk)
       return talk;
     
     
@@ -7834,7 +7835,7 @@ function(Class, UITree, List, Panel, PanelManager, Button, TEDApi,JoshmeAPI,  _,
                           app.data.set('/talks/favorites/', 
                           _.select(app.data.get('/talks/all/'), 
                              function (item){
-                               return _.contains(app.userSession.mytv.favorites, item.identifier );
+                               return _.contains(app.userSession.mytv.favorites, item.id );
                              }
                            )
                           );
@@ -7959,7 +7960,7 @@ function(Class, UITree, List, Panel, PanelManager, Button, TEDApi,JoshmeAPI,  _,
                 incrementalRefresh: true,
                 autoShow: true,
                 // modify default content of the <li>. item correspond to the childrens of videos/ in the data tree
-                itemInnerTemplate: '<figure data-id="<%= item.identifier %>"><img src="<%= item.image ? item.image : "http://placehold.it/208x142" %>"/><figcaption><%= item.title %></figcaption></figure>',
+                itemInnerTemplate: '<figure data-id="<%= item.id %>"><img src="<%= item.image ? item.image : "http://placehold.it/208x142" %>"/><figcaption><%= item.title %></figcaption></figure>',
                 scroller: true,
                 scrollOptions: {
                   // do scroll in only one direction
@@ -7993,7 +7994,7 @@ function(Class, UITree, List, Panel, PanelManager, Button, TEDApi,JoshmeAPI,  _,
                 incrementalRefresh: true,
                 autoShow: true,
                 // modify default content of the <li>. item correspond to the childrens of videos/ in the data tree
-                itemInnerTemplate: '<figure data-id="<%= item.identifier %>"><img src="<%= item.image ? item.image : "http://placehold.it/208x142" %>"/><figcaption><%= item.title %></figcaption></figure>',
+                itemInnerTemplate: '<figure data-id="<%= item.id %>"><img src="<%= item.image ? item.image : "http://placehold.it/208x142" %>"/><figcaption><%= item.title %></figcaption></figure>',
                 scroller: true,
                 scrollOptions: {
                   // do scroll in only one direction
@@ -8683,7 +8684,7 @@ function(App, Class, _, JoshmeAPI,addToHome) {
               self.data.update('/talks/favorites/', 
               _.select(self.data.get('/talks/all/'), 
                 function (item){
-                  return _.contains(self.userSession.mytv.favorites, item.identifier);
+                  return _.contains(self.userSession.mytv.favorites, item.id);
                 }
               )
               );
