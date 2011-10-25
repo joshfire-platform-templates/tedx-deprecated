@@ -3,6 +3,20 @@
 	"version":"0.0.1",
 	"fullName":"TEDx events",
 	"description":"Theme for TEDx events",
+	"graphic_small":"http://i.imgur.com/G8aGG.png",
+	"graphic_big":"http://i.imgur.com/cAniH.png",
+	"screenshots": [
+		"http://i.imgur.com/G66zW.png",
+		"http://i.imgur.com/BjN4O.png",
+		"http://i.imgur.com/4mdm8.png"
+	],
+	"previews":{
+		"mobile":"",
+		"tablet":"",
+		"desktop":"",
+		"tv":"",
+		"objects":""
+	},
 	"keywords": [
        "tedx",
        "events",
