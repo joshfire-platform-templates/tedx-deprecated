@@ -11,11 +11,10 @@
 		"http://i.imgur.com/4mdm8.png"
 	],
 	"previews":{
-		"mobile":"",
-		"tablet":"",
-		"desktop":"",
-		"tv":"",
-		"objects":""
+		"mobile":"http://i.imgur.com/rphpo.png",
+		"tablet":"http://i.imgur.com/44JIF.png",
+		"desktop":"http://i.imgur.com/F2m22.png",
+		"tv":"http://i.imgur.com/eVpIc.png"
 	},
 	"keywords": [
        "tedx",
