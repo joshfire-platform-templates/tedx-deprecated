@@ -3,19 +3,6 @@
 	"version":"0.0.1",
 	"fullName":"TEDx events",
 	"description":"Theme for TEDx events",
-	"graphic_small":"http://i.imgur.com/G8aGG.png",
-	"graphic_big":"http://i.imgur.com/cAniH.png",
-	"screenshots": [
-		"http://i.imgur.com/G66zW.png",
-		"http://i.imgur.com/BjN4O.png",
-		"http://i.imgur.com/4mdm8.png"
-	],
-	"previews":{
-		"mobile":"http://i.imgur.com/rphpo.png",
-		"tablet":"http://i.imgur.com/44JIF.png",
-		"desktop":"http://i.imgur.com/F2m22.png",
-		"tv":"http://i.imgur.com/eVpIc.png"
-	},
 	"keywords": [
        "tedx",
        "events",
@@ -23,6 +10,21 @@
        "ted"
    ],
 	"joshfire":{
+		"images":{
+			"screenshots": {
+				"mobile":["http://i.imgur.com/G66zW.png","http://i.imgur.com/BjN4O.png","http://i.imgur.com/4mdm8.png"]
+			},
+			"graphics":{
+				"*":{
+					"small":"http://i.imgur.com/G8aGG.png",
+					"big":"http://i.imgur.com/cAniH.png"
+				},
+				"mobile":"http://i.imgur.com/rphpo.png",
+				"tablet":"http://i.imgur.com/44JIF.png",
+				"desktop":"http://i.imgur.com/F2m22.png",
+				"tv":"http://i.imgur.com/eVpIc.png"
+			}
+		},
 		"devices":[
 			{
 			  "devices":["phone","tablet"],
