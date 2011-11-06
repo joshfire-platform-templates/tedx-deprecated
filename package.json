@@ -25,7 +25,12 @@
 			  "devices":"tv",
 				"startfile":"tvapp/index.html",
 				"images":"http://i.imgur.com/eVpIc.png"
-			}
+			},
+  		{
+  		  "devices":"object",
+  			"startfile":"mirrorapp/index.html",
+  			"images":"http://i.imgur.com/eVpIc.png"
+  		}
 		],
 		"datasources":{
 			"main":{
