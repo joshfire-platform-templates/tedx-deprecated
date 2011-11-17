@@ -23,12 +23,12 @@
 			},
 			{
 			  "devices":"tv",
-				"startfile":"tvapp/index.html",
+				"startfile":"mobileapp/index.ipad.html",
 				"images":"http://i.imgur.com/eVpIc.png"
 			},
   		{
   		  "devices":"object",
-  			"startfile":"mirrorapp/index.html",
+  			"startfile":"mobileapp/index.ipad.html",
   			"images":"http://i.imgur.com/eVpIc.png"
   		}
 		],
