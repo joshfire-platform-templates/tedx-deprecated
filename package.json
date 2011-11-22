@@ -3,6 +3,7 @@
 	"version":"0.0.1",
 	"fullName":"TEDx events",
 	"description":"Theme for TEDx events",
+	"private":true,
 	"keywords": [
        "tedx",
        "events",
