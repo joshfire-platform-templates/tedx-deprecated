@@ -3,7 +3,6 @@
 	"version":"0.0.1",
 	"fullName":"TEDx events",
 	"description":"Theme for TEDx events",
-	"private":true,
 	"keywords": [
        "tedx",
        "events",
@@ -11,6 +10,7 @@
        "ted"
    ],
 	"joshfire":{
+		"private":true,
 		"images":{
 			"small":"http://i.imgur.com/G8aGG.png",
 			"big":"http://i.imgur.com/cAniH.png"
