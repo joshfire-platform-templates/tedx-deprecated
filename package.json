@@ -1,7 +1,7 @@
 {
-	"name":"tedx",
+	"name":"tedx-deprecated",
 	"version":"0.0.1",
-	"fullName":"TEDx events",
+	"fullName":"DEPRECATED TEDx events",
 	"description":"Theme for TEDx events",
 	"keywords": [
        "tedx",
